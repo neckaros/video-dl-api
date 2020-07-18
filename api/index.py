@@ -1,6 +1,6 @@
+from __future__ import unicode_literals
 from sanic import Sanic
 from sanic.response import json
-from __future__ import unicode_literals
 import youtube_dl
 app = Sanic()
 
