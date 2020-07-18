@@ -8,7 +8,8 @@ app = Sanic()
 @app.route('/')
 @app.route('/<path:path>')
 async def index(request, path=""):
-    info = getinfo('https://www.youtube.com/watch?v=BaW_jenozKc')
+    url = request.args.get('url')
+    info = getinfo(url)
     return json(info)
 
 def getinfo(url):
